@@ -1,0 +1,52 @@
+header {
+    display: flex;
+    background-color: white;
+    mix-blend-mode: normal;
+    width: 100vw;
+    height: 5em;
+    box-shadow: 0px 4px 4px 6px #00000025;
+    margin: -8px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+body {
+    min-height: 100vh -8px;
+}
+
+#logo {
+    color: #625FFF;
+    font-size: 36px;
+    justify-content: center;
+    width: 35%;
+    margin-left: 1.5em;
+}
+
+#textlogo {
+    font-family: 'Bungee Inline', cursive;
+}
+
+#sign-in a,
+#sign-up a {
+    text-decoration: none;
+    color: #3b3947;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+#sign-in a:hover,
+#sign-up a:hover {
+    color: #625FFF;
+}
+
+.material-icons-outlined {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    color: #625FFF;
+}
+
+#sign-up {
+    margin-right: 3em;
+}
