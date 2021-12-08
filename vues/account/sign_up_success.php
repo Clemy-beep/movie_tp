@@ -1,5 +1,5 @@
 <?php
-require_once './config/config.php';
+require_once '../../config/config.php';
 session_start();
 session_unset();
 session_destroy();
@@ -16,9 +16,9 @@ session_destroy();
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/styles/header.css">
-    <link rel="stylesheet" href="./assets/styles/footer.css">
-    <link rel="stylesheet" href="./assets/styles/anonym.css">
+    <link rel="stylesheet" href="../../assets/styles/header.css">
+    <link rel="stylesheet" href="../../assets/styles/footer.css">
+    <link rel="stylesheet" href="../../assets/styles/anonym.css">
     <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap" rel="stylesheet">
     <title>CMDB</title>
 </head>
@@ -29,10 +29,10 @@ session_destroy();
             <span class="material-icons-outlined">
                 movie
             </span>
-            <span id="textlogo">CMBD</span>
+            <a href="../../index.php" style="text-decoration: none; color:#625FFF"><span id="textlogo">CMBD</span></a>
         </div>
         <div id="sign-in">
-            <a href="./vues/account/sign_in.php">
+            <a href="#">
                 <span class="material-icons-outlined">
                     login
                 </span>
@@ -40,7 +40,7 @@ session_destroy();
             </a>
         </div>
         <div id="sign-up">
-            <a href="./vues/account/sign_up.php">
+            <a href="#">
                 <span class="material-icons-outlined">
                     person_add_alt_1
                 </span>
@@ -49,30 +49,15 @@ session_destroy();
         </div>
     </header>
     <main>
-        <div id="welcome">
-            <h1>Welcome !</h1>
-            <p>Welcome to ClemyMovieDataBase or <span id="bold">CMBD</span> for short !</p>
-            <p>Here you can browse films, watch their trailers, browse films by gender and much more ! Have a good time exploring all our resources. </p>
-            <div id="buttons">
-                <a href="./vues/account/sign_in.php" id="sign-in_button">
-                    <span class="material-icons-outlined">
-                        login
-                    </span>
-                    Sign in
-                </a>
-                <a href="./vues/account/sign_up.php" id="sign-up_button">
-                    <span class="material-icons-outlined">
-                        person_add_alt_1
-                    </span>
-                    Sign up
-                </a>
-            </div>
+        <div id="container">
+            <h1>Account created !</h1>
+            <h2>Your account have successfully been created ! You can now <a href="./sign_in.php">Log in</a>!</h2>
         </div>
+
     </main>
     <?php
-    include './assets/templates/footer.html';
+    include '../../assets/templates/footer.html'
     ?>
-
 </body>
 
 </html>

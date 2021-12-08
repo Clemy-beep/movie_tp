@@ -1,0 +1,132 @@
+body {
+    background-color: transparent;
+    background: linear-gradient(103.81deg, #EAD0EB 1.03%, #D9D0EB 100%);
+}
+
+main {
+    min-height: calc(100vh - (5em + 4em));
+}
+
+.container {
+    padding: 32px;
+    height: max-content;
+    background-color: white;
+    box-shadow: 0px 4px 4px 4px #00000025;
+    border-radius: 16px;
+    margin-top: 2em;
+    margin-left: 2em;
+    margin-bottom: 10em;
+}
+
+h1 {
+    font-family: 'Bungee Shade';
+    font-size: 36px;
+}
+
+h2,
+label,
+input {
+    font-family: 'Roboto', sans-serif;
+    color: #3b3947;
+}
+
+h2 {
+    font-weight: 300;
+    font-size: 24px;
+    text-align: center;
+}
+
+h2 a,
+p a {
+    color: #625FFF;
+    text-decoration: none;
+    font-style: italic;
+    font-weight: 600;
+}
+
+#container p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+}
+
+@media(max-width:880px) {
+    #welcome {
+        width: 80vw;
+    }
+    #welcome p,
+    #sign-in_button,
+    #sign-up_button {
+        font-size: 18px;
+    }
+    #welcome h1 {
+        font-size: 24px;
+    }
+}
+
+#carousel {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    padding-top: 1em;
+    background-color: white;
+    padding-left: 2em;
+    padding-right: 2em;
+    height: max-content;
+    display: flex;
+    overflow-x: scroll;
+    gap: 3em;
+    scroll-snap-type: x mandatory;
+}
+
+#movie-infos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    gap: 2em;
+}
+
+.card {
+    box-shadow: 0px 0px 4px 4px #00000025;
+    padding: 8px;
+    border-radius: 16px;
+    scroll-snap-align: start;
+    border: 2px solid transparent;
+}
+
+.card:hover {
+    cursor: pointer;
+    border: 3px solid #625FFF;
+}
+
+.title,
+#movietitle {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1em;
+}
+
+#movie-specs {
+    width: 50%;
+}
+
+#movie-infos,
+#movie-infos h2 {
+    text-align: justify;
+}
+
+#movie-infos p {
+    font-family: 'Robotto', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    color: #3b3947;
+}
+
+.rating {
+    font-family: "Robotto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #3b3947;
+}

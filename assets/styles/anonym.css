@@ -1,6 +1,12 @@
 body {
     background-color: transparent;
     background: linear-gradient(103.81deg, #EAD0EB 1.03%, #D9D0EB 100%);
+    height: 100%;
+}
+
+main {
+    height: calc(100vh - (5em + 4em));
+    display: flex;
 }
 
 #welcome {
@@ -8,11 +14,9 @@ body {
     height: max-content;
     background-color: white;
     box-shadow: 0px 4px 4px 4px #00000025;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 25vh;
     width: 50vw;
     border-radius: 16px;
+    margin: auto;
 }
 
 #welcome p {
@@ -22,9 +26,59 @@ body {
     text-align: center;
 }
 
-#welcome h1 {
+#container {
+    padding: 32px;
+    height: max-content;
+    background-color: white;
+    box-shadow: 0px 4px 4px 4px #00000025;
+    border-radius: 16px;
+    margin: auto;
+}
+
+form {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
     font-family: 'Bungee Shade';
     font-size: 36px;
+    text-align: center;
+}
+
+h2,
+label,
+input {
+    font-family: 'Roboto', sans-serif;
+    color: #3b3947;
+}
+
+label {
+    font-style: italic;
+}
+
+h2 {
+    font-weight: 300;
+    font-size: 24px;
+    text-align: center;
+}
+
+h2 a,
+p a {
+    color: #625FFF;
+    text-decoration: none;
+    font-style: italic;
+    font-weight: 600;
+}
+
+#container p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
     text-align: center;
 }
 
@@ -32,12 +86,6 @@ body {
     color: #625FFF;
     font-weight: bold;
     font-style: italic;
-}
-
-@media(max-width:880px) {
-    #welcome {
-        width: fit-content;
-    }
 }
 
 #buttons {
@@ -65,4 +113,59 @@ body {
     background-color: white;
     border: 2px solid #625FFF;
     color: #625FFF;
+}
+
+input[type=text],
+input[type=password],
+input[type=number],
+input[type=email] {
+    border: none;
+    height: 44px;
+    background-color: #EAD0EB;
+    border-radius: 16px;
+    font-size: 26px;
+    font-family: 'Roboto', sans-serif;
+    padding-left: 14px;
+    margin-bottom: 0.5em;
+}
+
+input[type=submit] {
+    border-radius: 16px;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    font-weight: 500;
+    font-size: 24px;
+    background-color: #9E87DD;
+    border: 2px solid transparent;
+    width: 200px;
+    height: 2.5em;
+    align-self: center;
+    cursor: pointer;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+input[type=submit]:hover {
+    border: 2px solid #9E87DD;
+    background-color: white;
+    color: #625FFF;
+}
+
+input:focus-visible {
+    outline: 1px solid #625FFF;
+    border: 1px solid #625FFF;
+}
+
+@media(max-width:880px) {
+    #welcome {
+        width: 80vw;
+    }
+    #welcome p,
+    #sign-in_button,
+    #sign-up_button {
+        font-size: 18px;
+    }
+    #welcome h1 {
+        font-size: 24px;
+    }
 }

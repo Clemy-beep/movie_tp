@@ -10,10 +10,6 @@ header {
     justify-content: space-between;
 }
 
-body {
-    min-height: 100vh -8px;
-}
-
 #logo {
     color: #625FFF;
     font-size: 36px;
@@ -23,11 +19,12 @@ body {
 }
 
 #textlogo {
-    font-family: 'Bungee Inline', cursive;
+    font-family: 'Bungee Shade', cursive;
 }
 
 #sign-in a,
-#sign-up a {
+#sign-up a,
+.menuitem a {
     text-decoration: none;
     color: #3b3947;
     font-family: 'Roboto', sans-serif;
@@ -36,7 +33,8 @@ body {
 }
 
 #sign-in a:hover,
-#sign-up a:hover {
+#sign-up a:hover,
+.menuitem a:hover {
     color: #625FFF;
 }
 
@@ -47,6 +45,13 @@ body {
     color: #625FFF;
 }
 
-#sign-up {
+#sign-up,
+.menuitem {
     margin-right: 3em;
+}
+
+@media(max-width:880px) {
+    .headertext {
+        display: none;
+    }
 }
