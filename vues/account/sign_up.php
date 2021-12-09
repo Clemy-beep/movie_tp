@@ -23,49 +23,27 @@ session_destroy();
 </head>
 
 <body>
-    <header>
-        <div id="logo">
-            <span class="material-icons-outlined">
-                movie
-            </span>
-            <a href="../../index.php" style="text-decoration: none; color:#625FFF"><span id="textlogo">CMBD</span></a>
-        </div>
-        <div id="sign-in">
-            <a href="./sign_in.php">
-                <span class="material-icons-outlined">
-                    login
-                </span>
-                <span id="logtext">Sign In</span>
-            </a>
-        </div>
-        <div id="sign-up">
-            <a href="#">
-                <span class="material-icons-outlined">
-                    person_add_alt_1
-                </span>
-                <span id="regtext">Sign Up</span>
-            </a>
-        </div>
-    </header>
+    <?php include '../../assets/templates/header_an.html' ?>
+
     <main>
         <div id="container">
             <h1>Create an account</h1>
             <h2>Already have one ? <a href="./sign_in.php">Sign in</a>!</h2>
             <form action="../../controller/signupController.php" method="POST">
-                <label for="username"><span class="material-icons-outlined" style="color: #3b3947;" >badge</span> Username</label>
-                <input type="text" name="username" id="username"required>
-                <label for="email"><span class="material-icons-outlined" style="color: #3b3947;" > email</span> Email</label>
-                <input type="email" name="email" id="email"required>
-                <label for="age"><span class="material-icons-outlined"style="color: #3b3947;">cake</span> Age</label>
-                <input type="number" name="age" id="age" min="12" max="99"required>
+                <label for="username"><span class="material-icons-outlined" style="color: #3b3947;">badge</span> Username</label>
+                <input type="text" name="username" id="username" required>
+                <label for="email"><span class="material-icons-outlined" style="color: #3b3947;"> email</span> Email</label>
+                <input type="email" name="email" id="email" required>
+                <label for="age"><span class="material-icons-outlined" style="color: #3b3947;">cake</span> Age</label>
+                <input type="number" name="age" id="age" min="12" max="99" required>
                 <label for="password"><span class="material-icons-outlined" style="color: #3b3947;">lock</span> Password</label>
-                <input type="password" name="password" id="password"required>
+                <input type="password" name="password" id="password" required>
                 <input type="submit" value="Sign up!">
             </form>
             <div id="error" style="height: 2em;"></div>
             <p>By clicking on "Sign up !", you accept our <a href="#">Terms of Use</a></p>
         </div>
-        
+
     </main>
     <?php
     include '../../assets/templates/footer.html'

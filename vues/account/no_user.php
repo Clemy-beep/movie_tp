@@ -24,30 +24,7 @@ session_destroy();
 </head>
 
 <body>
-    <header>
-        <div id="logo">
-            <span class="material-icons-outlined">
-                movie
-            </span>
-            <a href="../../index.php" style="text-decoration: none; color:#625FFF"><span id="textlogo">CMBD</span></a>
-        </div>
-        <div id="sign-in">
-            <a href="#">
-                <span class="material-icons-outlined">
-                    login
-                </span>
-                <span id="logtext">Sign In</span>
-            </a>
-        </div>
-        <div id="sign-up">
-            <a href="#">
-                <span class="material-icons-outlined">
-                    person_add_alt_1
-                </span>
-                <span id="regtext">Sign Up</span>
-            </a>
-        </div>
-    </header>
+    <?php include '../../assets/templates/header_an.html'?>
     <main>
         <div id="container">
             <h1>No user found</h1>

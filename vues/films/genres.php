@@ -1,8 +1,14 @@
 <?php
-require_once '../../config/config.php';
 session_start();
-session_unset();
-session_destroy();
+if (!isset($_SESSION)) header('Location: /index.php');
+$isMajor = "true";
+if ($_SESSION['user']['age'] < 18) $isMajor = "false";
+
+if(!isset($_GET['id'])){
+    $genre_id = null;
+} else $genre_id = $_GET['id'];
+
+
 ?>
 
 <!DOCTYPE html>
@@ -17,25 +23,31 @@ session_destroy();
     <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/styles/header.css">
+    <link rel="stylesheet" href="../../assets/styles/logged.css?<?php echo time(); ?>">
     <link rel="stylesheet" href="../../assets/styles/footer.css">
-    <link rel="stylesheet" href="../../assets/styles/anonym.css">
     <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap" rel="stylesheet">
-    <title>CMDB</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Film</title>
 </head>
 
 <body>
-    <?php include '../../assets/templates/header_an.html' ?>
-
+    <?php include '../../assets/templates/header_log.php' ?>
     <main>
-        <div id="container">
-            <h1>Account created !</h1>
-            <h2>Your account have successfully been created ! You can now <a href="./sign_in.php">Log in</a>!</h2>
-        </div>
-
+        <input type="hidden" name="id" id="id" value="<?=$genre_id?>">
+        <input type="hidden" name="major" id="major" value="<?=$isMajor?>">
+      <div class="container" >
+          <h1><span class="material-icons-outlined">category</span> Genres</h1>
+          <div id="genres"></div>
+      </div>
+      <div class="container">
+          <h1><span class="material-icons-outlined">movie</span> Related movies</h1>
+          <div id="searchResult"></div>
+      </div>
     </main>
     <?php
     include '../../assets/templates/footer.html'
     ?>
+    <script src="./genres.js"></script>
 </body>
 
 </html>

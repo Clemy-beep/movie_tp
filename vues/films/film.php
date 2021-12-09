@@ -1,8 +1,8 @@
 <?php
 session_start();
 if (!isset($_SESSION)) header('Location: /index.php');
-$isMajor = true;
-if ($_SESSION['user']['age'] < 18) $isMajor = false;
+$isMajor = "true";
+if ($_SESSION['user']['age'] < 18) $isMajor = "false";
 
 $film_id= $_GET['id'];
 if(!isset($film_id)){
@@ -29,33 +29,10 @@ if(!isset($film_id)){
     <title>Film</title>
 </head>
 <body>
-<header>
-        <div id="major" style="display: none;"><?= $isMajor ?></div>
-        <div id=movie_id style="display: none;"><?=$film_id?></div>
-        <div id="logo">
-            <span class="material-icons-outlined">
-                movie
-            </span>
-            <a href="./homepage.php" style="text-decoration: none; color:#625FFF"><span id="textlogo">CMBD</span></a>
-        </div>
-        <div class="menuitem">
-            <a href="#">
-                <span class="material-icons-outlined">
-                    account_circle
-                </span>
-                <span class="headertext"><?= $_SESSION['user']['username'] ?></span>
-            </a>
-        </div>
-        <div class="menuitem">
-            <a href="#">
-                <span class="material-icons-outlined">
-                    category
-                </span>
-                <span class="headertext">Genders</span>
-            </a>
-        </div>
-    </header>
+    <?php include '../../assets/templates/header_log.php'?>
     <main>
+        <input type="hidden" name="film_id" id="movie_id" value="<?=$film_id?>">
+        <input type="hidden" name="major" id="major" value="<?=$major?>">
         <div class="container">
         <div id="movietitle"></div>
 

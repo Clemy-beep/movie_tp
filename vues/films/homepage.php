@@ -1,8 +1,8 @@
 <?php
 session_start();
 if (!isset($_SESSION)) header('Location: /index.php');
-$isMajor = true;
-if ($_SESSION['user']['age'] < 18) $isMajor = false;
+$isMajor = "true";
+if ($_SESSION['user']['age'] < 18) $isMajor = "false";
 ?>
 
 <!DOCTYPE html>
@@ -25,37 +25,22 @@ if ($_SESSION['user']['age'] < 18) $isMajor = false;
 </head>
 
 <body>
-    <header>
-        <div id="major" style="display: none;"><?= $isMajor ?></div>
-        <div id="logo">
-            <span class="material-icons-outlined">
-                movie
-            </span>
-            <a href="./homepage.php" style="text-decoration: none; color:#625FFF"><span id="textlogo">CMBD</span></a>
-        </div>
-        <div class="menuitem">
-            <a href="#">
-                <span class="material-icons-outlined">
-                    account_circle
-                </span>
-                <span class="headertext"><?= $_SESSION['user']['username'] ?></span>
-            </a>
-        </div>
-        <div class="menuitem">
-            <a href="#">
-                <span class="material-icons-outlined">
-                    category
-                </span>
-                <span class="headertext">Genders</span>
-            </a>
-        </div>
-    </header>
+    <?php include '../../assets/templates/header_log.php' ?>
+
     <main>
-        <div class="container">
+        <input type="hidden" name="major" id="major" value="<?= $isMajor ?>">
+        <div class="container" id="today">
+            <h1><span class="material-icons-outlined">
+                    auto_awesome
+                </span>Most popular today</h1>
+            <div id="carousel1">
+            </div>
+        </div>
+        <div class="container" id="week">
             <h1><span class="material-icons-outlined">
                     auto_graph
                 </span>Most popular this week</h1>
-            <div id="carousel">
+            <div id="carousel2">
             </div>
         </div>
     </main>

@@ -4,7 +4,7 @@ header {
     mix-blend-mode: normal;
     width: 100vw;
     height: 5em;
-    box-shadow: 0px 4px 4px 6px #00000025;
+    box-shadow: 0px 4px 16px 2px #00000025;
     margin: -8px;
     align-items: center;
     justify-content: space-between;

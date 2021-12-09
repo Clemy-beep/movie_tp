@@ -8,14 +8,14 @@ main {
 }
 
 .container {
-    padding: 32px;
+    padding: 2em;
     height: max-content;
     background-color: white;
-    box-shadow: 0px 4px 4px 4px #00000025;
+    box-shadow: 0px 4px 16px 2px #00000025;
     border-radius: 16px;
     margin-top: 2em;
     margin-left: 2em;
-    margin-bottom: 10em;
+    margin-bottom: 2em;
 }
 
 h1 {
@@ -65,13 +65,15 @@ p a {
     }
 }
 
-#carousel {
+#carousel2,
+#carousel1 {
     margin-top: 2em;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
     padding-top: 1em;
     background-color: white;
     padding-left: 2em;
     padding-right: 2em;
+    padding-bottom: 1em;
     height: max-content;
     display: flex;
     overflow-x: scroll;
@@ -119,7 +121,7 @@ p a {
 
 #movie-infos p {
     font-family: 'Robotto', sans-serif;
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 300;
     color: #3b3947;
 }
@@ -129,4 +131,62 @@ p a {
     font-size: 16px;
     font-weight: 400;
     color: #3b3947;
+}
+
+#genres {
+    display: flex;
+    align-items: flex-start;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+#genre {
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    color: #3b3947;
+    background-color: #EAD0EB;
+    border-radius: 32px;
+    padding: 1em;
+    cursor: pointer;
+}
+
+#genre:hover {
+    box-shadow: 0px 0px 8px 2px #00000025;
+}
+
+#homepage,
+#videos a {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    font-size: 15px;
+    color: #3b3947;
+}
+
+#homepage:hover,
+#videos a:hover {
+    color: #625FFF;
+    text-decoration: underline;
+    font-size: 16px;
+}
+
+#videos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+}
+
+#searchResult {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    align-items: center;
+    justify-content: center;
+}
+
+.film h2 {
+    font-size: 18px;
+}
+
+#poster {
+    width: 90%;
 }
