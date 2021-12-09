@@ -1,5 +1,6 @@
 var id = $("#movie_id").val();
 
+
 $.ajax({
     type: "GET",
     url: "https://api.themoviedb.org/3/movie/" + id + "?api_key=a1204f7b9fa1c61fcda4e1f2ebc1553c&language=en-US&append_to_response=videos",
@@ -28,12 +29,15 @@ function displayFilm(film) {
         case 'pl':
             language = "Polish";
             break;
+        case 'es':
+            language = "Spanish";
+            break;
         default:
             language = "Undefined";
             break;
     }
     console.log(film);
-    $("#movietitle").append(`<h1 style = "padding-left:4em;">${film.title}</h1><div class="rating"><span class="material-icons-outlined">star_half</span>${film.vote_average}</div>`);
+    $("#movietitle").append(`<h1 >${film.title}</h1><div class="rating"><span class="material-icons-outlined">star_half</span>${film.vote_average}</div>`);
     if (film.poster_path !== null)
         $("#movie-infos").append(`<img src="http://image.tmdb.org/t/p/w300/${film.poster_path}" alt="poster">`);
     if (film.homepage !== "")
@@ -45,7 +49,7 @@ function displayFilm(film) {
     if (film.videos.results.length > 0) {
         $("#movie-specs").append("<h2><span class='material-icons-outlined'>videocam</span> Videos</h2><div id='videos'></div>");
         film.videos.results.forEach(video => {
-            getVideo(video.site, video.key);
+            getVideo(video.site, video.key, video.name);
         });
     }
     $("#movie-specs").append("<h2><span class='material-icons-outlined'>category</span> Genres</h2><div id='genres'></div>");
@@ -59,7 +63,7 @@ function showNotFOund() {
     $("#movie-specs").append("<p>We couldn't find the film you're searching for. You can still look at other films by going back to <a href='./homepage.php'>Home</a></p>");
 }
 
-function getVideo(site, key) {
+function getVideo(site, key, name) {
     var url = "";
     switch (site) {
         case 'Youtube':
@@ -72,5 +76,5 @@ function getVideo(site, key) {
             url = "https://www.youtube.com/watch?v=";
             break;
     }
-    $("#videos").append(`<a href="${url + key}">${site} Trailer</a>`);
+    $("#videos").append(`<a href="${url + key}">${name}</a>`);
 }

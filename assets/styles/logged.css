@@ -1,192 +1,279 @@
-body {
-    background-color: transparent;
-    background: linear-gradient(103.81deg, #EAD0EB 1.03%, #D9D0EB 100%);
-}
-
-main {
-    min-height: calc(100vh - (5em + 4em));
-}
-
-.container {
-    padding: 2em;
-    height: max-content;
-    background-color: white;
-    box-shadow: 0px 4px 16px 2px #00000025;
-    border-radius: 16px;
-    margin-top: 2em;
-    margin-left: 2em;
-    margin-bottom: 2em;
-}
-
-h1 {
-    font-family: 'Bungee Shade';
-    font-size: 36px;
-}
-
-h2,
-label,
-input {
-    font-family: 'Roboto', sans-serif;
-    color: #3b3947;
-}
-
-h2 {
-    font-weight: 300;
-    font-size: 24px;
-    text-align: center;
-}
-
-h2 a,
-p a {
-    color: #625FFF;
-    text-decoration: none;
-    font-style: italic;
-    font-weight: 600;
-}
-
-#container p {
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    text-align: center;
-}
-
-@media(max-width:880px) {
-    #welcome {
-        width: 80vw;
+    body {
+        background-color: transparent;
+        background: linear-gradient(103.81deg, #EAD0EB 1.03%, #D9D0EB 100%);
     }
-    #welcome p,
-    #sign-in_button,
-    #sign-up_button {
+    
+    main {
+        min-height: calc(100vh - (5em + 4em));
+    }
+    
+    .container {
+        padding-left: 4em;
+        padding-right: 4em;
+        padding-bottom: 2em;
+        padding-top: 1em;
+        background-color: white;
+        box-shadow: 0px 4px 16px 2px #00000025;
+        border-radius: 16px;
+        margin: 2em;
+    }
+    
+    #title {
+        display: flex;
+        gap: 1em;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    select {
+        height: 44px;
+        border-radius: 16px;
+        background: #EAD0EB;
+        color: #3b3947;
+        font-size: 16px;
+        font-family: 'Roboto', sans-serif;
+        border: none;
+        padding-left: 0.5em;
+    }
+    
+    h1 {
+        font-family: 'Bungee Shade';
+        font-size: 36px;
+    }
+    
+    h2,
+    label,
+    input {
+        font-family: 'Roboto', sans-serif;
+        color: #3b3947;
+    }
+    
+    h2 {
+        font-weight: 300;
+        font-size: 24px;
+        text-align: center;
+    }
+    
+    h2 a,
+    p a {
+        color: #625FFF;
+        text-decoration: none;
+        font-style: italic;
+        font-weight: 600;
+    }
+    
+    #container p {
+        font-family: 'Roboto', sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+    }
+    
+    #carousel2,
+    #carousel1 {
+        margin-top: 2em;
+        margin-bottom: 1em;
+        padding-top: 1em;
+        background-color: white;
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-bottom: 1em;
+        display: flex;
+        overflow-x: scroll;
+        gap: 3em;
+        scroll-snap-type: x mandatory;
+    }
+    
+    #movie-infos {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: fit-content;
+        gap: 2em;
+    }
+    
+    .card {
+        box-shadow: 0px 0px 4px 4px #00000025;
+        padding: 8px;
+        border-radius: 16px;
+        scroll-snap-align: start;
+        border: 2px solid transparent;
+    }
+    
+    .card:hover {
+        cursor: pointer;
+        border: 3px solid #625FFF;
+    }
+    
+    .title,
+    #movietitle {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 1em;
+    }
+    
+    #movietitle h1 {
+        padding-left: 4em;
+    }
+    
+    #movie-specs {
+        width: 50%;
+    }
+    
+    #movie-infos,
+    #movie-infos h2 {
+        text-align: justify;
+    }
+    
+    #movie-infos p {
+        font-family: 'Robotto', sans-serif;
+        font-size: 17px;
+        font-weight: 300;
+        color: #3b3947;
+    }
+    
+    .rating {
+        font-family: "Robotto", sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        color: #3b3947;
+    }
+    
+    #genres {
+        display: flex;
+        align-items: flex-start;
+        gap: 1em;
+        flex-wrap: wrap;
+    }
+    
+    #genre {
+        font-size: 15px;
+        font-family: 'Roboto', sans-serif;
+        color: #3b3947;
+        background-color: #EAD0EB;
+        border-radius: 32px;
+        padding: 1em;
+        cursor: pointer;
+    }
+    
+    #genre:hover {
+        box-shadow: 0px 0px 8px 2px #00000025;
+    }
+    
+    #homepage,
+    #videos a {
+        font-family: 'Roboto', sans-serif;
+        text-decoration: none;
+        font-size: 15px;
+        color: #3b3947;
+    }
+    
+    #homepage:hover,
+    #videos a:hover {
+        color: #625FFF;
+        text-decoration: underline;
+        font-size: 16px;
+    }
+    
+    #videos {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5em;
+    }
+    
+    #searchResult {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .film h2 {
         font-size: 18px;
     }
-    #welcome h1 {
-        font-size: 24px;
+    
+    #poster {
+        width: 90%;
     }
-}
-
-#carousel2,
-#carousel1 {
-    margin-top: 2em;
-    margin-bottom: 1em;
-    padding-top: 1em;
-    background-color: white;
-    padding-left: 2em;
-    padding-right: 2em;
-    padding-bottom: 1em;
-    height: max-content;
-    display: flex;
-    overflow-x: scroll;
-    gap: 3em;
-    scroll-snap-type: x mandatory;
-}
-
-#movie-infos {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: fit-content;
-    gap: 2em;
-}
-
-.card {
-    box-shadow: 0px 0px 4px 4px #00000025;
-    padding: 8px;
-    border-radius: 16px;
-    scroll-snap-align: start;
-    border: 2px solid transparent;
-}
-
-.card:hover {
-    cursor: pointer;
-    border: 3px solid #625FFF;
-}
-
-.title,
-#movietitle {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 1em;
-}
-
-#movie-specs {
-    width: 50%;
-}
-
-#movie-infos,
-#movie-infos h2 {
-    text-align: justify;
-}
-
-#movie-infos p {
-    font-family: 'Robotto', sans-serif;
-    font-size: 17px;
-    font-weight: 300;
-    color: #3b3947;
-}
-
-.rating {
-    font-family: "Robotto", sans-serif;
-    font-size: 16px;
-    font-weight: 400;
-    color: #3b3947;
-}
-
-#genres {
-    display: flex;
-    align-items: flex-start;
-    gap: 1em;
-    flex-wrap: wrap;
-}
-
-#genre {
-    font-size: 15px;
-    font-family: 'Roboto', sans-serif;
-    color: #3b3947;
-    background-color: #EAD0EB;
-    border-radius: 32px;
-    padding: 1em;
-    cursor: pointer;
-}
-
-#genre:hover {
-    box-shadow: 0px 0px 8px 2px #00000025;
-}
-
-#homepage,
-#videos a {
-    font-family: 'Roboto', sans-serif;
-    text-decoration: none;
-    font-size: 15px;
-    color: #3b3947;
-}
-
-#homepage:hover,
-#videos a:hover {
-    color: #625FFF;
-    text-decoration: underline;
-    font-size: 16px;
-}
-
-#videos {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5em;
-}
-
-#searchResult {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1em;
-    align-items: center;
-    justify-content: center;
-}
-
-.film h2 {
-    font-size: 18px;
-}
-
-#poster {
-    width: 90%;
-}
+    
+    .film {
+        text-align: center;
+        width: 25%;
+    }
+    
+    @media(max-width:880px) {
+        #welcome {
+            width: 80vw;
+        }
+        #movietitle h1 {
+            padding-left: 1em;
+        }
+        #welcome p,
+        #sign-in_button,
+        #sign-up_button {
+            font-size: 18px;
+        }
+        #welcome h1 {
+            font-size: 24px;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        p {
+            font-size: 15px;
+        }
+        #searchResult {
+            flex-direction: column;
+        }
+        .film {
+            width: 80%;
+        }
+        .card img {
+            display: none;
+        }
+        .card .title {
+            flex-direction: column;
+            text-overflow: ellipsis;
+            width: 125px;
+            height: 125px;
+        }
+        .card h2 {
+            font-size: 18px;
+            background-color: #D9D0EB;
+            border-radius: 8px;
+        }
+        #movie-infos {
+            align-items: flex-start;
+        }
+        #cardGenre {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        #cardGenre img {
+            display: block;
+            height: 175px;
+            width: 150px;
+        }
+    }
+    
+    @media(max-width:750px) {
+        img {
+            width: 150px;
+        }
+        #movie-specs {
+            width: 100%;
+        }
+        #movietitle {
+            flex-direction: column;
+        }
+    }
+    
+    @media(max-width:520px) {
+        #movie-infos {
+            flex-direction: column-reverse;
+            justify-content: center;
+        }
+    }

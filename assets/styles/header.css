@@ -2,12 +2,11 @@ header {
     display: flex;
     background-color: white;
     mix-blend-mode: normal;
-    width: 100vw;
     height: 5em;
     box-shadow: 0px 4px 16px 2px #00000025;
     margin: -8px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 #logo {
@@ -50,8 +49,19 @@ header {
     margin-right: 3em;
 }
 
-@media(max-width:880px) {
+#signout {
+    margin-right: -3em;
+}
+
+@media(max-width:900px) {
     .headertext {
         display: none;
+    }
+    #logo {
+        width: 20%;
+        margin-left: 0;
+    }
+    #textlogo {
+        font-size: 24px;
     }
 }

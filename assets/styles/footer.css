@@ -5,8 +5,7 @@ footer {
     margin-left: -8px;
     margin-right: -8px;
     margin-top: 16px;
-    bottom: 0;
-    width: 100vw;
+    width: calc(100vw - 8px);
     display: flex;
     align-items: center;
     justify-content: center;

@@ -3,12 +3,6 @@ session_start();
 if (!isset($_SESSION)) header('Location: /index.php');
 $isMajor = "true";
 if ($_SESSION['user']['age'] < 18) $isMajor = "false";
-
-if (!isset($_GET['id'])) {
-    $genre_id = null;
-} else $genre_id = $_GET['id'];
-
-
 ?>
 
 <!DOCTYPE html>
@@ -31,32 +25,25 @@ if (!isset($_GET['id'])) {
 </head>
 
 <body>
-    <?php include '../../assets/templates/header_log.php' ?>
+    <?php
+    include '../../assets/templates/header_log.php';
+    ?>
     <main>
-        <input type="hidden" name="id" id="id" value="<?= $genre_id ?>">
-        <input type="hidden" name="major" id="major" value="<?= $isMajor ?>">
         <div class="container">
-            <h1><span class="material-icons-outlined">category</span> Genres</h1>
-            <div id="genres"></div>
+            <h1> <span class="material-icons-outlined">manage_search</span>Search a movie</h1>
+            <form>
+                <input type="text" name="query" id="searchbar" placeholder="Ex : Hawkeye">
+                <input type="submit" value="Search !">
+            </form>
         </div>
         <div class="container">
-            <div id="title">
-                <h1><span class="material-icons-outlined">movie</span> Related movies</h1>
-                <select name="order_by" id="order">
-                    <option value="popularity_desc">Popularity</option>
-                    <option value="release_date.desc">Release date</option>
-                    <option value="original_title.asc">Alphabethical order</option>
-                    <option value="vote_average.desc">Vote average</option>
-                </select>
-            </div>
-
-            <div id="searchResult"></div>
+            <h1><span class="material-icons-outlined">find_in_page</span> Result of your research</h1>
+            <div id="queryResult"></div>
         </div>
     </main>
     <?php
-    include '../../assets/templates/footer.html'
+    include '../../assets/templates/footer.html';
     ?>
-    <script src="./genres.js"></script>
 </body>
 
 </html>

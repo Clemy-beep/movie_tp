@@ -1,5 +1,5 @@
 <header>
-   
+
     <div id="logo">
         <span class="material-icons-outlined">
             movie
@@ -23,6 +23,14 @@
         </a>
     </div>
     <div class="menuitem">
+        <a href="./search.php">
+            <span class="material-icons-outlined">
+                search
+            </span>
+            <span class="headertext">Search</span>
+        </a>
+    </div>
+    <div class="menuitem" id="signout">
         <a href="../account/sign_out.php">
             <span class="material-icons-outlined">
                 logout
@@ -31,3 +39,4 @@
         </a>
     </div>
 </header>
+
