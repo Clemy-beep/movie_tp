@@ -7,7 +7,7 @@
         <a href="./homepage.php" style="text-decoration: none; color:#625FFF"><span id="textlogo">CMBD</span></a>
     </div>
     <div class="menuitem">
-        <a href="#">
+        <a href="./user.php">
             <span class="material-icons-outlined">
                 account_circle
             </span>
