@@ -7,6 +7,7 @@ header {
     margin: -8px;
     align-items: center;
     justify-content: space-evenly;
+    width: calc(100% + 8px);
 }
 
 #logo {
@@ -53,13 +54,19 @@ header {
     margin-right: -3em;
 }
 
-@media(max-width:900px) {
-    .headertext {
-        display: none;
-    }
+@media(max-width:1200px) {
     #logo {
         width: 20%;
         margin-left: 0;
+    }
+    .headertext {
+        font-size: 15px;
+    }
+}
+
+@media(max-width:900px) {
+    .headertext {
+        display: none;
     }
     #textlogo {
         font-size: 24px;
