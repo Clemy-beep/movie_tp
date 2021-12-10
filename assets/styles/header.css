@@ -7,7 +7,7 @@ header {
     margin: -8px;
     align-items: center;
     justify-content: space-evenly;
-    width: calc(100% + 8px);
+    width: 100vw;
 }
 
 #logo {

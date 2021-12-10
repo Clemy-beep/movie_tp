@@ -1,11 +1,13 @@
         body {
             background-color: transparent;
             width: calc(100vw - 20px);
+            min-height: 100vh;
+            position: relative;
             background: linear-gradient(103.81deg, #EAD0EB 1.03%, #D9D0EB 100%);
         }
         
         main {
-            min-height: calc(100vh - (5em + 6em));
+            min-height: calc(100% - (5em + 6em));
         }
         
         .container {
@@ -19,7 +21,7 @@
             margin-right: auto;
             margin-left: auto;
             margin-top: 3em;
-            margin-bottom: 2em;
+            margin-bottom: 3em;
             max-width: 1302px;
         }
         
