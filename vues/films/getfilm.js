@@ -15,6 +15,7 @@ $.ajax({
 });
 
 function displayFilm(film) {
+
     let language;
     switch (film.original_language) {
         case 'en':
@@ -22,6 +23,12 @@ function displayFilm(film) {
             break;
         case 'jp':
             language = "Japanese";
+            break;
+        case 'ru':
+            language = "Russian";
+            break;
+        case 'kr':
+            language = "Korean";
             break;
         case 'fr':
             language = "French";
@@ -54,7 +61,7 @@ function displayFilm(film) {
     }
     $("#movie-specs").append("<h2><span class='material-icons-outlined'>category</span> Genres</h2><div id='genres'></div>");
     film.genres.forEach(genre => {
-        $("#genres").append(`<div id="genre" onclick="window.location.replace('/vues/films/genres.php?id=${genre.id}')">${genre.name}</div>`);
+        $("#genres").append(`<div id="genre" onclick="window.location.replace('/vues/films/genres.php?id=${genre.id}&page=1')">${genre.name}</div>`);
     });
 }
 
