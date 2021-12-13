@@ -10,6 +10,61 @@
             min-height: calc(100% - (5em + 6em));
         }
         
+        form {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        label {
+            font-style: italic;
+            font-family: 'Roboto', sans-serif;
+            color: #3b3947;
+        }
+        
+        input[type=text] {
+            border: none;
+            height: 44px;
+            background-color: #EAD0EB;
+            border-radius: 16px;
+            font-size: 26px;
+            font-family: 'Roboto', sans-serif;
+            padding-left: 14px;
+            margin-bottom: 0.5em;
+        }
+        
+        input[type=submit],
+        #createList {
+            border-radius: 16px;
+            font-family: "Roboto", sans-serif;
+            color: white;
+            font-weight: 500;
+            font-size: 24px;
+            background-color: #9E87DD;
+            border: 2px solid transparent;
+            width: 200px;
+            height: 2.5em;
+            align-self: center;
+            cursor: pointer;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+        }
+        
+        input[type=submit]:hover,
+        #createList:hover {
+            border: 2px solid #9E87DD;
+            background-color: white;
+            color: #625FFF;
+        }
+        
+        input:focus-visible {
+            outline: 1px solid #625FFF;
+            border: 1px solid #625FFF;
+        }
+        
         .container {
             padding-left: 4em;
             padding-right: 4em;
@@ -197,10 +252,18 @@
         }
         
         #homepage,
-        #videos a {
+        #videos a,
+        #lists a {
             font-family: 'Roboto', sans-serif;
             text-decoration: none;
             font-size: 15px;
+            color: #3b3947;
+        }
+        
+        #lists a {
+            font-family: 'Roboto', sans-serif;
+            text-decoration: none;
+            font-size: 18px;
             color: #3b3947;
         }
         
@@ -215,6 +278,39 @@
             display: flex;
             flex-wrap: wrap;
             gap: 0.5em;
+        }
+        
+        #lists a:hover {
+            color: #625FFF;
+            text-decoration: underline;
+            font-size: 22px;
+        }
+        
+        #createLink {
+            font-size: 16px;
+            font-family: 'Robotto', sans-serif;
+            color: #3b3947;
+            border: 2px solid #625FF6;
+            padding: 0.5em;
+            border-radius: 16px;
+            width: fit-content;
+            margin-right: auto;
+            margin-left: auto;
+            margin-top: 1em;
+            margin-bottom: 1em;
+        }
+        
+        #createLink a {
+            text-decoration: none;
+            color: #3b3947;
+        }
+        
+        #createLink:hover {
+            padding: 0.8em;
+        }
+        
+        #createLink a:hover {
+            color: #625FF6;
         }
         
         #searchResult,

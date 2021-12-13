@@ -1,7 +1,6 @@
 <?php
 session_start();
 if (!isset($_SESSION)) header('Location: /index.php');
-
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +21,7 @@ if (!isset($_SESSION)) header('Location: /index.php');
     <link rel="stylesheet" href="../../assets/styles/footer.css">
     <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <title>User Infos</title>
+    <title>Create List</title>
 </head>
 
 <body>
@@ -31,16 +30,22 @@ if (!isset($_SESSION)) header('Location: /index.php');
     ?>
     <main>
         <div class="container">
-            <h1><span class="material-icons-outlined">account_circle</span> User informations</h1>
-
-          
+            <h1><span class="material-icons-outlined">note_add</span> New list</h1>
+            <form>
+                <input type="hidden" name="session_id" id="session_id" value="<?=$_SESSION['user']['sessionID'] ?>">
+                <label for="name">Name</label>
+                <input type="text" name="name" id="name" required>
+                <label for="description">Description</label>
+                <input type="text" name="description" id="description" required>
+                <input type="submit" name="createList" id="createList" value="Create list">
+            </form>
         </div>
-       
+
     </main>
     <?php
     include '../../assets/templates/footer.html';
     ?>
-    <script src="lists.js"></script>
+    <script src="createList.js"></script>
 
 </body>
 
