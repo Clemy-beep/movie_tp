@@ -81,7 +81,6 @@ function createSession($aDatas)
     $_SESSION['user']['username'] = $aDatas['username'];
     $_SESSION['user']['email'] = $aDatas['email'];
     $_SESSION['user']['password'] = $aDatas['pwd'];
-    $_SESSION['user']['id']=$aDatas['user_id'];
-    $_SESSION['user']['age']= $aDatas['age'];
+    $_SESSION['user']['id'] = $aDatas['user_id'];
+    $_SESSION['user']['age'] = $aDatas['age'];
 }
-
