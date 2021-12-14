@@ -20,7 +20,7 @@ function createCardWeek(films) {
             } else title = film.title;
 
             console.log(film.id);
-            $("#carousel2").append(`<div class="card" id="cardWeek"  onclick="window.location.replace('/vues/films/film.php?id=${film.id}')"><div class="title"><div class="rating"><span class="material-icons-outlined">star_half</span>${film.vote_average}</div><h2>${title}</h2></div><img src="http://image.tmdb.org/t/p/w300/${film.poster_path}" alt="poster"></div>`);
+            $("#carousel2").append(`<div class="card" id="cardWeek"  onclick="window.open('/vues/films/film.php?id=${film.id}')"><div class="title"><div class="rating"><span class="material-icons-outlined">star_half</span>${film.vote_average}</div><h2>${title}</h2></div><img src="http://image.tmdb.org/t/p/w300/${film.poster_path}" alt="poster"></div>`);
         });
 
     } else $("#carousel2").append("<h2>We have no film to show you at the moment</h2>");
@@ -52,7 +52,7 @@ function createCardDay(films) {
                 poster_path = "http://image.tmdb.org/t/p/w300/" + film.poster_path;
             } else poster_path = "https://via.placeholder.com/300x450?text=Poster+not+found";
             console.log(film.id);
-            $("#carousel1").append(`<div class="card" id="cardDay"  onclick="window.location.replace('/vues/films/film.php?id=${film.id}')"><div class="title"><div class="rating"><span class="material-icons-outlined">star_half</span>${film.vote_average}</div><h2>${title}</h2></div><img src="${poster_path}" alt="poster"></div>`);
+            $("#carousel1").append(`<div class="card" id="cardDay"  onclick="window.open('/vues/films/film.php?id=${film.id}')"><div class="title"><div class="rating"><span class="material-icons-outlined">star_half</span>${film.vote_average}</div><h2>${title}</h2></div><img src="${poster_path}" alt="poster"></div>`);
         });
 
     } else $("#carousel1").append("<h2>We have no film to show you at the moment</h2>");

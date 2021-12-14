@@ -4,8 +4,8 @@ if (!isset($_SESSION)) header('Location: /index.php');
 $isMajor = "true";
 if ($_SESSION['user']['age'] < 18) $isMajor = "false";
 
-$film_id= $_GET['id'];
-if(!isset($film_id)){
+$film_id = $_GET['id'];
+if (!isset($film_id)) {
     header('Location: /vues/films/homepage.php');
 }
 ?>
@@ -29,13 +29,19 @@ if(!isset($film_id)){
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Film</title>
 </head>
+
 <body>
-    <?php include '../../assets/templates/header_log.php'?>
+    <?php include '../../assets/templates/header_log.php' ?>
     <main>
-        <input type="hidden" name="film_id" id="movie_id" value="<?=$film_id?>">
-        <input type="hidden" name="major" id="major" value="<?=$major?>">
+        <input type="hidden" name="film_id" id="movie_id" value="<?= $film_id ?>">
+        <input type="hidden" name="major" id="major" value="<?= $major ?>">
         <div class="container">
-        <div id="movietitle"></div>
+            <div id="movietitle">
+                <div id="addToList">
+                    <select name="addToList" id="addToList"></select>
+                </div>
+
+            </div>
 
             <div id="movie-infos">
                 <div id="movie-specs"></div>
@@ -47,4 +53,5 @@ if(!isset($film_id)){
     ?>
     <script src="getfilm.js"></script>
 </body>
+
 </html>

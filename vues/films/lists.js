@@ -20,7 +20,9 @@ $.ajax({
 function showLists(lists) {
     if (lists.length > 0) {
         lists.forEach(list => {
-            $("#lists").append(`<a href="#"><span class="material-icons-outlined">link</span> ${list.name}</a>`);
+            $("#lists").append('<div class="listitem"></div>');
+            $(".listitem").append(` <a href="#"> <span class="material-icons-outlined"> link </span>${list.name}</a>`);
+            $(".listitem").append(` <p> ${list.description } </p>`);
         });
     }
     $("#createLink").append();

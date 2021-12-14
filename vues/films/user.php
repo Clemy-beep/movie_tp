@@ -49,7 +49,7 @@ $sessionId = $_SESSION['user']['sessionID'];
         <div class="container">
             <h1><span class="material-icons-outlined">list_alt</span> Your lists</h1>
             <input type="hidden" name="sessionId" id="sessionId" value="<?= $sessionId ?>">
-            <div id="lists"></div>
+            <div id="lists" class="lists"></div>
             <div id="createLink">
                 <a href="./createList.php"><span class="material-icons-outlined">add</span>Create a list</a>
             </div>
