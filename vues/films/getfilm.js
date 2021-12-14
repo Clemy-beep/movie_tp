@@ -24,6 +24,9 @@ function displayFilm(film) {
         case 'jp':
             language = "Japanese";
             break;
+        case 'ca':
+            language = "Catalan";
+            break;
         case 'ru':
             language = "Russian";
             break;
@@ -69,6 +72,7 @@ function showNotFOund() {
     $("#movietitle").append("<h1>Film not found</h1>");
     $("#movie-specs").append("<p>We couldn't find the film you're searching for. You can still look at other films by going back to <a href='./homepage.php'>Home</a></p>");
 }
+
 
 function getVideo(site, key, name) {
     var url = "";
