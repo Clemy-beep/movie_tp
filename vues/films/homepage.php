@@ -4,7 +4,8 @@ if (!isset($_SESSION)) header('Location: /index.php');
 $isMajor = "true";
 if ($_SESSION['user']['age'] < 18) $isMajor = "false";
 
-$_SESSION['user']['sessionID']= $_GET['sessionId'];
+if (isset($_GET['sessionId']))
+    $_SESSION['user']['sessionID'] = $_GET['sessionId'];
 ?>
 
 
@@ -41,13 +42,11 @@ $_SESSION['user']['sessionID']= $_GET['sessionId'];
             </div>
         </div>
         <div class="container" id="week">
-            <h1><span class="material-icons-outlined">
-                    auto_graph
-                </span>Most popular this week</h1>
-            <div id="carousel2">
-            </div>
+            <h1><span class="material-icons-outlined">auto_graph</span> Most popular this week</h1>
+            <div id="carousel2"></div>
         </div>
     </main>
+    <div style="height: 32px;"></div>
     <?php
     include '../../assets/templates/footer.html'
     ?>
