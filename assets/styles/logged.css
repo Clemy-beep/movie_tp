@@ -371,7 +371,8 @@
             background-color: #EAD0EB;
             text-align: center;
             padding-left: 1em;
-            height: 95%;
+            height: 50%;
+            font-size: 16px;
             border-radius: 16px 0px 0px 16px;
             width: 100%;
         }
