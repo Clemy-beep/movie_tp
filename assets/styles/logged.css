@@ -8,6 +8,7 @@
         
         main {
             min-height: calc(100% - (5em + 6em));
+            padding-bottom: 2em;
         }
         
         form {

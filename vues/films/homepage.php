@@ -46,7 +46,6 @@ if (isset($_GET['sessionId']))
             <div id="carousel2"></div>
         </div>
     </main>
-    <div style="height: 32px;"></div>
     <?php
     include '../../assets/templates/footer.html'
     ?>
